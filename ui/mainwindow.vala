@@ -35,6 +35,7 @@ public class MainWindow: Gtk.ApplicationWindow
 
     var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
     
+    /*
     var menu = new MainMenu ();
     menu.window = this;
     menu.quit_item_activated.connect (() =>
@@ -43,6 +44,7 @@ public class MainWindow: Gtk.ApplicationWindow
     });
     // application.set_menubar (menu);
     box.pack_start (menu, false, true, 0);
+    */
     
     scrolled_window = new Gtk.ScrolledWindow (null, null);
     scrolled_window.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
@@ -52,7 +54,7 @@ public class MainWindow: Gtk.ApplicationWindow
 
     working_trace_path = null;
 
-    menu.open_file_item_activated.connect (open_file);
+    // menu.open_file_item_activated.connect (open_file);
     box.pack_start (scrolled_window, true, true, 1);		
 
     timeline.interval_selected.connect ((begin, end) =>
